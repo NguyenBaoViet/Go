@@ -12,11 +12,6 @@ func TestSolution(t *testing.T) {
 		want string
 	}{
 		// TODO: Add test cases.
-		{
-			name: "123",
-			args: "aBB",
-			want: "",
-		}
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
