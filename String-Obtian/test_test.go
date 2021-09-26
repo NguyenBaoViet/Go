@@ -13,12 +13,44 @@ func TestSolution(t *testing.T) {
 		want string
 	}{
 		{
-			name: "",
+			name: "add",
 			args: args{
 				s1: "nice",
 				s2: "nicer",
 			},
 			want: "ADD r",
+		},
+		{
+			name: "change",
+			args: args{
+				s1: "test",
+				s2: "tent",
+			},
+			want: "CHANGE s n",
+		},
+		{
+			name: "move",
+			args: args{
+				s1: "beans",
+				s2: "banes",
+			},
+			want: "MOVE e",
+		},
+		{
+			name: "impssible",
+			args: args{
+				s1: "0",
+				s2: "odd",
+			},
+			want: "IMPOSSIBLE",
+		},
+		{
+			name: "nothing",
+			args: args{
+				s1: "abc",
+				s2: "abc",
+			},
+			want: "NOTHING",
 		},
 	}
 	for _, tt := range tests {
